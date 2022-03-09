@@ -80,7 +80,10 @@ git clone https://github.com/HilaLi-Tech/Busy-PH.git
 cd Busy-PH
 flutter run
 ```
-## 🚀HilaLi Tech
+## 👨‍💼💰 Business-side Application
+The Busy PH app also has a business side, where business owners have their own UI for the scheduling of their appointments, as well as for the editting of their shop page. You may find the business side prototype [here](https://personal-myluonu0.outsystemscloud.com/PreviewInDevices/?DeviceName=Smartphone&URL=/BusinessUserEnd/Incoming?_ts=637824634541205220)
+
+## 🚀 HilaLi Tech
 HilaLi Tech is a team of  Computer Engineering students from Mapua University formed in 2021 that aims to develop technology for organizations that support a cause.
 
 **Meet the Team:**
