@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'classes/Category.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const BusyPH());
 }
 
 class BusyPH extends StatefulWidget {
@@ -35,13 +36,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  Category salon = Category(title: "Salon", description: "Have your hair cut in a professional salon.");
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -221,11 +217,6 @@ class _MyHomePageState extends State<MyHomePage> {
         BottomNavigationBarItem(
             icon: Icon(Icons.notifications), label: 'Notifications'),
       ]),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: _incrementCounter,
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ),
     );
   }
 }
