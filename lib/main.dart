@@ -4,9 +4,14 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class BusyPH extends StatefulWidget {
+  const BusyPH({Key? key}) : super(key: key);
 
+  @override
+  State<BusyPH> createState() => _BusyPHState();
+}
+
+class _BusyPHState extends State<BusyPH> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -169,76 +174,20 @@ class _MyHomePageState extends State<MyHomePage> {
                               const SizedBox(
                                 height: 8,
                               ),
-                              Container(
+                              Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [Container(
                                   height: 30,
                                   width: 30,
-                                  child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                      children: [
+                                  child:
                                         FloatingActionButton(
                                     onPressed: () {},
                                     child: Icon(Icons.add,
                                         color: Colors.orange[500]),
                                     backgroundColor: Colors.orange[100],
-                                  )]))
+                                  ))])
                             ],
                           )),
-                          elevation: 0),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50)),
-                      width: 200,
-                      child: Card(
-                          child: Padding(
-                              padding: EdgeInsets.all(10),
-                              child:Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [Flexible(fit: FlexFit.tight,child: Container(
-                                          height: 100,
-                                          width: 200,
-                                          decoration:  BoxDecoration(
-                                              borderRadius: BorderRadius.circular(20),
-                                              image: DecorationImage(
-                                                image: const AssetImage('assets/images/Pipes.png'),
-                                                fit: BoxFit.fitWidth,
-                                                alignment: FractionalOffset.topCenter,
-                                              )
-                                          )
-                                      ))]),
-                                  const SizedBox(
-                                    height: 8,
-                                  ),
-                                  const Text(
-                                    "Pipe Repair Services",
-                                    style: TextStyle(
-                                        fontSize: 20, fontWeight: FontWeight.w700),
-                                  ),
-                                  const SizedBox(
-                                    height: 8,
-                                  ),
-                                  const Text(
-                                      "Get your pipes fixed in repair shops near you!"),
-                                  const SizedBox(
-                                    height: 8,
-                                  ),
-                                  Container(
-                                      height: 30,
-                                      width: 30,
-                                      child: Row(
-                                          crossAxisAlignment: CrossAxisAlignment.end,
-                                          children: [
-                                            FloatingActionButton(
-                                              onPressed: () {},
-                                              child: Icon(Icons.add,
-                                                  color: Colors.orange[500]),
-                                              backgroundColor: Colors.orange[100],
-                                            )]))
-                                ],
-                              )),
                           elevation: 0),
                     ),
                   ],
@@ -280,3 +229,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
