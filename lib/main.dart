@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './Seller/seller_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Montserrat',
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: const MyHomePage(title: 'Welcome'),
+      // home: MyHomePage(title: 'Welcome'),
+      home: SellerPage(),
     );
   }
 }
