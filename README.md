@@ -1,4 +1,4 @@
-![alt text](https://github.com/HilaLi-Tech/Busy-PH/main/assetsimages/Logo.png "Busy PH Logo")
+![alt text](https://github.com/HilaLi-Tech/Busy-PH/blob/main/assets/images/Logo.png "Busy PH Logo")
 
 # helloworld
 
