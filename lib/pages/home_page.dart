@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import '../classes/Category.dart';
 import '../cards/category_card.dart';
 import '../cards/long_card.dart';
+import '../cards/bottom_navigation_bar.dart';
 
 class BusyPH extends StatefulWidget {
   const BusyPH({Key? key}) : super(key: key);
@@ -45,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   ];
 
   List<Category> top_performing = [
-    Category(title: "Marky Phone Repair", description: "We repair any phone problems.", image: "Top_Phone_Repair.png", route: "/Marky"),
+    Category(title: "Marky Phone Repair", description: "We repair any phone problems.", image: "Top_Phone_Repair.png", route: "/shop"),
     Category(title: "SonJay Car Wash", description: "Dirty car? No problem with SonJay Car wash!", image: "Top_Car_Wash.png", route: "/SonJay"),
     Category(title: "Pat'z Repair Shop", description: "Machines overheating? Systems crashing? We fix everything you need!", image: "Top_Repair_Shop.png", route: "/Patz")
   ];
@@ -168,17 +169,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
 
                 Column(
-                  children: top_performing.map((top_service) => LongCard(top_service: top_service)).toList(),
+                  children: top_performing.map((top_service) => LongCard(
+                      top_service: top_service,
+                      // navigate: (){
+                      //   setState(){
+                      //     Navigator.pushNamed(context, top_service.route);
+                      //   }
+                      // }
+                  )).toList(),
                 )])),
-
-
-      bottomNavigationBar:
-      BottomNavigationBar(items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.notifications), label: 'Notifications'),
-      ]),
+      bottomNavigationBar: BottomNaviBar(),
     );
   }
 }

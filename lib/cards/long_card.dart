@@ -3,11 +3,16 @@ import '../classes/Category.dart';
 
 class LongCard extends StatelessWidget {
   final Category top_service;
-  LongCard({ required this.top_service });
+  // final Function navigate;
+  LongCard({ required this.top_service});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return InkWell(
+      onTap: () {
+
+      },
+        child: Container(
       margin: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
       width: 500,
       height: 100,
@@ -69,6 +74,6 @@ class LongCard extends StatelessWidget {
                       alignment: FractionalOffset.topCenter,
                     )
                 )
-            )]),);
+            )]),));
   }
 }

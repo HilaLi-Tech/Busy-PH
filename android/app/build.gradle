@@ -35,7 +35,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.helloworld"
+        applicationId "com.hilalitech.busyPH"
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
@@ -54,3 +54,5 @@ android {
 flutter {
     source '../..'
 }
+
+apply plugin: 'com.google.gms.google-services'

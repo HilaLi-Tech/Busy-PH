@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1023326571181",
+    "project_id": "busy-ph",
+    "storage_bucket": "busy-ph.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023326571181:android:9bfbec17c56df51dfa1424",
+        "android_client_info": {
+          "package_name": "com.hilalitech.busyPH"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023326571181-m8r8v9l5u0e9b191ah7dnnpp91vk4muh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJE-ufEiBiVR1gvsumGAf02kSs--GR9s0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023326571181-m8r8v9l5u0e9b191ah7dnnpp91vk4muh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
