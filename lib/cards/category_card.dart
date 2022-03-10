@@ -62,16 +62,21 @@ class CategoryCard extends StatelessWidget {
                       ),
                       Expanded( child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: [Container(
+                          children: [
+                            Container(
                               height: 30,
                               width: 30,
                               child:
                               FloatingActionButton(
                                 onPressed: () {},
-                                child: Icon(Icons.add,
+                                child: Icon(Icons.arrow_forward_ios_rounded,
                                     color: Colors.orange[500]),
                                 backgroundColor: Colors.orange[100],
-                              ))]))
+                              )
+                            )
+                          ]
+                      )
+                      )
                     ],
                   )),
               elevation: 0),

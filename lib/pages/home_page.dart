@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:build_ph/cards/long_card.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import '../classes/Category.dart';
 import '../cards/category_card.dart';
 import '../cards/long_card.dart';
@@ -38,17 +37,17 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<Category> categories = [
-    Category(title: "Hair and\nNails Services", description: "Have your hair cut in a professional salon.", image: "Salon.png"),
-    Category(title: "Auto Repair Services", description: "Motor vehicle maintenance.", image: "Auto.jpg"),
-    Category(title: "Plumbing\nRepair", description: "For all of your plumbing needs.", image: "Pipes.png"),
-    Category(title: "Laundry and Dry Cleaning", description: "Add shine to your clothing!", image: "Laundry.jpg"),
-    Category(title: "Sewing and Alteration", description: "Sewing and alteration for your fashion needs.", image: "Tailoring.jpg"),
+    Category(title: "Hair and\nNails Services", description: "Have your hair cut in a professional salon.", image: "Salon.png", route: "/salon_category"),
+    Category(title: "Auto Repair Services", description: "Motor vehicle maintenance.", image: "Auto.jpg", route: "/auto_category"),
+    Category(title: "Plumbing\nRepair", description: "For all of your plumbing needs.", image: "Pipes.png", route: "/pipes_category"),
+    Category(title: "Laundry and Dry Cleaning", description: "Add shine to your clothing!", image: "Laundry.jpg", route: "/laundry_category"),
+    Category(title: "Sewing and Alteration", description: "Sewing and alteration for your fashion needs.", image: "Tailoring.jpg", route: "tailoring_category"),
   ];
 
   List<Category> top_performing = [
-    Category(title: "Marky Phone Repair", description: "We repair any phone problems.", image: "Top_Phone_Repair.png"),
-    Category(title: "SonJay Car Wash", description: "Dirty car? No problem with SonJay Car wash!", image: "Top_Car_Wash.png"),
-    Category(title: "Pat'z Repair Shop", description: "Machines overheating? Systems crashing? We fix everything you need!", image: "Top_Repair_Shop.png")
+    Category(title: "Marky Phone Repair", description: "We repair any phone problems.", image: "Top_Phone_Repair.png", route: "/Marky"),
+    Category(title: "SonJay Car Wash", description: "Dirty car? No problem with SonJay Car wash!", image: "Top_Car_Wash.png", route: "/SonJay"),
+    Category(title: "Pat'z Repair Shop", description: "Machines overheating? Systems crashing? We fix everything you need!", image: "Top_Repair_Shop.png", route: "/Patz")
   ];
 
   Widget categoryTemplate(category){
@@ -153,7 +152,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: ListView(
                           scrollDirection: Axis.horizontal,
                           // children: categories.map((category) => categoryTemplate(category)).toList(),
-                          children: categories.map((category) => CategoryCard(category: category)).toList(),
+                          children: categories.map((category) => CategoryCard(
+                              category: category,
+                          // goto: () {
+                          //       setState((){
+                          //       });
+                          // }
+                          )).toList(),
                         ))),
                 const Padding(
                   padding: const EdgeInsets.fromLTRB(33, 20, 0, 5),

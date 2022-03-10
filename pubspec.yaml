@@ -60,15 +60,7 @@ flutter:
           weight: 700
   
   assets:
-    - assets/images/Logo.png
-    - assets/images/Salon.png
-    - assets/images/Pipes.png
-    - assets/images/Auto.jpg
-    - assets/images/Laundry.jpg
-    - assets/images/Tailoring.jpg
-    - assets/images/Top_Phone_Repair.png
-    - assets/images/Top_Car_Wash.png
-    - assets/images/Top_Repair_Shop.png
+    - assets/images/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

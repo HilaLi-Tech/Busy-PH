@@ -16,9 +16,11 @@ class LongCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(child: Container(
-                margin: EdgeInsets.only(top:20, left: 20),
+                margin: EdgeInsets.only(top:20, left: 15),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -36,7 +38,25 @@ class LongCard extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 10,
                             fontStyle: FontStyle.italic,
-                          ))]))),
+                          )),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      // Container(
+                      //     height: 25,
+                      //     width: 25,
+                      //     child:
+                      //     FloatingActionButton(
+                      //       onPressed: () {},
+                      //       child: Icon(Icons.arrow_forward_ios_rounded,
+                      //           color: Colors.orange[500]),
+                      //       backgroundColor: Colors.orange[100],
+                      //     )
+                      // )
+                    ]
+                )
+            )
+            ),
             Container(
                 margin: EdgeInsets.all(10),
                 // height: 100,
