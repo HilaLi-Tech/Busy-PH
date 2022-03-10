@@ -1,5 +1,8 @@
+//TODO: fix filter functionality
+
 import 'package:flutter/material.dart';
 import 'classes/Category.dart';
+import 'category_card.dart';
 
 void main() {
   runApp(const BusyPH());
@@ -36,8 +39,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Category salon = Category(title: "Salon", description: "Have your hair cut in a professional salon.");
+  List<Category> categories = [
+    Category(title: "Hair and\n Nails Services", description: "Have your hair cut in a professional salon.", image: "Salon.png"),
+    Category(title: "Auto Repair Services", description: "Motor vehicle maintenance.", image: "Auto.jpg"),
+    Category(title: "Plumbing\nRepair", description: "For all of your plumbing needs.", image: "Pipes.png"),
+    Category(title: "Laundry and Dry Cleaning", description: "Add shine to your clothing!", image: "Laundry.jpg"),
+    Category(title: "Sewing and Alteration", description: "Sewing and alteration for your fashion needs.", image: "Tailoring.jpg"),
+  ];
 
+  Widget categoryTemplate(category){
+    return CategoryCard(category:category);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -117,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     icon: const Icon(Icons.filter_alt, size: 35))
               ],
             )),
-        const Padding(
+        Padding(
           padding: EdgeInsets.fromLTRB(33, 0, 0, 5),
           child: Text("Categories",
               style: TextStyle(fontWeight: FontWeight.w800, fontSize: 25),
@@ -129,64 +141,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50)),
-                      width: 200,
-                      child: Card(
-                          child: Padding(
-                            padding: EdgeInsets.all(10),
-    child:Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [Flexible(fit: FlexFit.tight,child: Container(
-                                height: 100,
-                                width: 200,
-                                decoration:  BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  image: DecorationImage(
-                                    image: const AssetImage('assets/images/Salon.png'),
-                                    fit: BoxFit.fitWidth,
-                                    alignment: FractionalOffset.topCenter,
-                                  )
-                                  )
-                              ))]),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              const Text(
-                                "Salons",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w700),
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              const Text(
-                                  "Have your hair cut in a professional salon"),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [Container(
-                                  height: 30,
-                                  width: 30,
-                                  child:
-                                        FloatingActionButton(
-                                    onPressed: () {},
-                                    child: Icon(Icons.add,
-                                        color: Colors.orange[500]),
-                                    backgroundColor: Colors.orange[100],
-                                  ))])
-                            ],
-                          )),
-                          elevation: 0),
-                    ),
-                  ],
+                  // children: categories.map((category) => categoryTemplate(category)).toList(),
+                  children: categories.map((category) => CategoryCard(category: category)).toList(),
                 ))),
         const Padding(
           padding: const EdgeInsets.fromLTRB(33, 0, 0, 5),
@@ -220,4 +176,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
 
