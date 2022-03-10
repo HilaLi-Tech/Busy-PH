@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'classes/Category.dart';
+import '../classes/Category.dart';
 
 class LongCard extends StatelessWidget {
   final Category top_service;

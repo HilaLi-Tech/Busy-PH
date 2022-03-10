@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'classes/Category.dart';
+import '../classes/Category.dart';
 
 
 //this dart file contains the category card template for the entire application
