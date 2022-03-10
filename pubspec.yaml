@@ -66,6 +66,9 @@ flutter:
     - assets/images/Auto.jpg
     - assets/images/Laundry.jpg
     - assets/images/Tailoring.jpg
+    - assets/images/Top_Phone_Repair.png
+    - assets/images/Top_Car_Wash.png
+    - assets/images/Top_Repair_Shop.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

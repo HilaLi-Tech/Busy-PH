@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'classes/Category.dart';
 
+
+//this dart file contains the category card template for the entire application
 class CategoryCard extends StatelessWidget {
   final Category category;
   CategoryCard({ required this.category });
@@ -8,11 +10,16 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+        color: Colors.yellow[50],
         child: Container(
+
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50)),
+              borderRadius: BorderRadius.circular(50),
+            color: Colors.yellow[50],
+          ),
           width: 200,
           child: Card(
+              color: Colors.yellow[50],
               child: Padding(
                   padding: EdgeInsets.all(10),
                   child:Column(
