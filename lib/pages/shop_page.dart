@@ -86,7 +86,7 @@ class _ShopState extends State<Shop> {
                             textAlign: TextAlign.center,
                             style: TextStyle(color: Colors.blue, fontSize: 12)),
                             decoration: BoxDecoration(
-                              border: Border.all(color: Colors.blue, width: 2)
+                              border: Border.all(color: Colors.blue)
                             ),
                           ))
                     ]),
@@ -107,6 +107,36 @@ class _ShopState extends State<Shop> {
                   color: Colors.grey[500],
                 ),
               ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                            margin: EdgeInsets.all(10),
+                            width: 300,
+                            height: 300,
+                            decoration:  BoxDecoration(
+                              // borderRadius: BorderRadius.circular(20),
+                                image: DecorationImage(
+                                  image: AssetImage('assets/images/Map_Text.jpg'),
+                                  fit: BoxFit.fitWidth,
+                                  alignment: FractionalOffset.topCenter,
+                                )
+                            )
+                        ),
+
+                      ],
+                    ),
+                    Container(
+                      height:20,
+                      width: 400,
+                      child: Text("Set Appointment",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.blue, fontSize: 12)),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.blue)
+                      ),
+                    )
           ]))])
       ),
       bottomNavigationBar: const BottomNaviBar(),
