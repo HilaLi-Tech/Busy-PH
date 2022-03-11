@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import '../cards/bottom_navigation_bar.dart';
 import '../cards/appbar.dart';
+import 'appointment_calendar.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 class Shop extends StatefulWidget {
@@ -126,7 +127,14 @@ class _ShopState extends State<Shop> {
 
                       ],
                     ),
-                    Container(
+                    InkWell(
+                      onTap: (){
+                        setState(() {
+                          Navigator.push(context,
+                              new MaterialPageRoute(builder: (context) => StartPage()));
+                        });
+                      },
+                        child: Container(
                       height:20,
                       width: 400,
                       child: Text("Set Appointment",
@@ -136,7 +144,7 @@ class _ShopState extends State<Shop> {
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(color: Colors.blue)
                       ),
-                    )
+                    ))
           ]))])
       ),
       bottomNavigationBar: const BottomNaviBar(),
