@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import '../cards/bottom_navigation_bar.dart';
+import '../cards/appbar.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 class Shop extends StatefulWidget {
   const Shop({Key? key}) : super(key: key);
@@ -10,21 +12,24 @@ class Shop extends StatefulWidget {
 }
 
 class _ShopState extends State<Shop> {
-  void getData() async {
-    String username = await Future.delayed(Duration(seconds: 3), (){
-       return "String";
-    });
-  }
+  // void getCalendar() async {
+  //   String username = await Future.delayed(Duration(seconds: 3), (){
+  //      return "String";
+  //   });
+  // }
   @override
   void initState(){
     super.initState();
-    getData();
+    // getCalendar();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
+    return  const Scaffold(
+      appBar: const PreferredSize(
+        preferredSize: const Size.fromHeight(150.0),
+        child: AppBarBusy(),
+      ),
       body: SingleChildScrollView(),
       bottomNavigationBar: const BottomNaviBar(),
     );

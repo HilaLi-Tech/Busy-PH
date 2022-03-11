@@ -4,15 +4,19 @@ import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 import 'pages/loading.dart';
 import 'pages/shop_page.dart';
+// import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
-  runApp(MaterialApp(
-    initialRoute: '/home',
-    routes: {
-      '/': (context) => Loading(),
-      '/home': (context) => BusyPH(),
-      '/shop': (context) => Shop()
-    }));
+  // initializeDateFormatting().then((_) =>
+      runApp(MaterialApp(
+      initialRoute: '/home',
+      routes: {
+        '/': (context) => Loading(),
+        '/home': (context) => BusyPH(),
+        '/shop': (context) => Shop()
+      })
+  // )
+  );
 }
 
 

@@ -1,16 +1,25 @@
 import 'package:flutter/material.dart';
 import '../classes/Category.dart';
+import '../pages/shop_page.dart';
 
-class LongCard extends StatelessWidget {
+class LongCard extends StatefulWidget {
   final Category top_service;
   // final Function navigate;
   LongCard({ required this.top_service});
 
   @override
+  State<LongCard> createState() => _LongCardState();
+}
+
+class _LongCardState extends State<LongCard> {
+  @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-
+        setState((){
+          Navigator.push(context,
+          new MaterialPageRoute(builder: (context) => Shop()));
+        });
       },
         child: Container(
       margin: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
@@ -31,7 +40,7 @@ class LongCard extends StatelessWidget {
                     children: [
                       Container(
                           child: Text(
-                            top_service.title,
+                            widget.top_service.title,
                             style: TextStyle(
                                 fontSize: 16, fontWeight: FontWeight.w700),
                           )),
@@ -39,7 +48,7 @@ class LongCard extends StatelessWidget {
                         height: 8,
                       ),
                       Text(
-                          top_service.description,
+                          widget.top_service.description,
                           style: TextStyle(
                               fontSize: 10,
                             fontStyle: FontStyle.italic,
@@ -69,7 +78,7 @@ class LongCard extends StatelessWidget {
                 decoration:  BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
-                      image: AssetImage(top_service.image),
+                      image: AssetImage(widget.top_service.image),
                       fit: BoxFit.fitWidth,
                       alignment: FractionalOffset.topCenter,
                     )

@@ -5,6 +5,7 @@ import '../classes/Category.dart';
 import '../cards/category_card.dart';
 import '../cards/long_card.dart';
 import '../cards/bottom_navigation_bar.dart';
+import '../cards/appbar.dart';
 
 class BusyPH extends StatefulWidget {
   const BusyPH({Key? key}) : super(key: key);
@@ -62,51 +63,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(150.0),
-        child: AppBar(
-          title: Row(
-            children: <Widget>[
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                        padding: const EdgeInsets.fromLTRB(11, 0, 0, 0),
-                        child: Text(
-                          widget.title,
-                          style:  const TextStyle(
-                            color: Colors.black,
-                            fontSize: 40,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        )),
-                    const Padding(
-                        padding: EdgeInsets.fromLTRB(15.0, 0, 0, 0),
-                        child: Text(
-                          "Thea Denisse Foronda",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal,
-                          ),
-                        )),
-                  ],
-                ),
-              ),
-              Image.asset(
-                'assets/images/Logo.png',
-                height: 80,
-                width: 80,
-              )
-            ],
-          ),
-          backgroundColor: Colors.white,
-          elevation: 0,
-          toolbarHeight: double.infinity,
-        ),
+      appBar: const PreferredSize(
+          preferredSize: const Size.fromHeight(150.0),
+          child: AppBarBusy(),
       ),
-      body: SingleChildScrollView(
+          body: SingleChildScrollView(
           child:  Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -140,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             icon: const Icon(Icons.filter_alt, size: 35))
                       ],
                     )),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.fromLTRB(33, 0, 0, 5),
                   child: Text("Categories",
                       style: TextStyle(fontWeight: FontWeight.w800, fontSize: 25),
@@ -171,14 +132,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 Column(
                   children: top_performing.map((top_service) => LongCard(
                       top_service: top_service,
-                      // navigate: (){
-                      //   setState(){
-                      //     Navigator.pushNamed(context, top_service.route);
-                      //   }
-                      // }
+
                   )).toList(),
                 )])),
-      bottomNavigationBar: BottomNaviBar(),
+      bottomNavigationBar: const BottomNaviBar(),
     );
   }
 }
